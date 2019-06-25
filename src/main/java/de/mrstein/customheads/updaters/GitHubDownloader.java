@@ -115,7 +115,7 @@ public class GitHubDownloader {
                                 try {
                                     Files.copy(new File(downloadDir, assetName), downloadTo);
 
-                                    //FileUtils.copyFile(new File(downloadDir, assetName), downloadTo);
+                                    FileUtils.copyFile(new File(downloadDir, assetName), downloadTo);
                                     if (afterTask.length > 0)
                                         afterTask[0].call();
                                 } catch (Exception e) {
