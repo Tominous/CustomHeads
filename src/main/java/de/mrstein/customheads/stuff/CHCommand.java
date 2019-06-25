@@ -82,13 +82,13 @@ public class CHCommand implements CommandExecutor {
                     return true;
                 }
                 // Cache Cleaner
-//                if (args[0].equalsIgnoreCase("clear")) {
-//                    HeadFontType.clearCache();
-//                    GitHubDownloader.clearCache();
-//                    GameProfileBuilder.cache.clear();
-//                    ScrollableInventory.clearCache();
-//                    return true;
-//                }
+                if (args[0].equalsIgnoreCase("clear")) {
+                    HeadFontType.clearCache();
+                    GitHubDownloader.clearCache();
+                    GameProfileBuilder.cache.clear();
+                    ScrollableInventory.clearCache();
+                    return true;
+                }
             }
             Random rdm = new Random();
             sender.sendMessage(rdmans[rdm.nextInt(rdmans.length)]);
@@ -194,7 +194,7 @@ public class CHCommand implements CommandExecutor {
                 return true;
             }
 
-            /* Test Command plez Ignore
+            // Test Command plez Ignore
             if (args[0].equalsIgnoreCase("test")) {
                 try {
                     Configs tempcon = new Configs(CustomHeads.getInstance(), "test.yml", false, "testing");
@@ -207,7 +207,7 @@ public class CHCommand implements CommandExecutor {
                             File outFile = new File("plugins/CustomHeads/parsedCategories", CustomHeads.getCategoryManager().getSourceFile(category).getName());
                             Files.createParentDirs(outFile);
                             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(outFile), StandardCharsets.UTF_8);
-//                            FileWriter writer = new FileWriter(outFile);
+                            FileWriter writer = new FileWriter(outFile);
                             writer.write(category.toString());
                             writer.flush();
                             writer.close();
@@ -229,7 +229,7 @@ public class CHCommand implements CommandExecutor {
                 }
                 return true;
             }
-            */
+            
 
             if (args[0].equalsIgnoreCase("categories")) {
                 if (hasPermission(player, "heads.admin")) {
